@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Harshu Tool - Login</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: url('1000028820.jpg') no-repeat center center/cover;
+      color: #fff;
+    }
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.65);
+      backdrop-filter: blur(4px);
+    }
+    .container {
+      position: relative;
+      z-index: 1;
+      padding: 40px;
+      border-radius: 20px;
+      background: rgba(0,0,0,0.6);
+      box-shadow: 0 0 25px #ff007f, 0 0 50px #ff33a6;
+      text-align: center;
+      max-width: 500px;
+      width: 90%;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+    h1 {
+      font-size: 38px;
+      margin-bottom: 20px;
+      color: #ff007f;
+      text-shadow: 0 0 10px #ff007f, 0 0 20px #ff33a6;
+    }
+    input {
+      width: 100%;
+      padding: 14px;
+      margin: 15px 0;
+      border-radius: 12px;
+      border: 2px solid #ff007f;
+      background: rgba(0,0,0,0.5);
+      color: #fff;
+      font-size: 16px;
+      outline: none;
+      text-align: center;
+      box-shadow: 0 0 10px #ff007f;
+    }
+    button {
+      padding: 14px 30px;
+      border: none;
+      background: #ff007f;
+      color: #fff;
+      border-radius: 12px;
+      cursor: pointer;
+      font-size: 18px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 20px #ff33a6, 0 0 40px #ff66c2;
+    }
+    button:hover {
+      transform: scale(1.05);
+      background: #ff33a6;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(30px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🔥 HARSHU TOOL 🔥</h1>
+    <p>Enter your Facebook Access Token to continue</p>
+    <input type="text" id="token" placeholder="Enter FB Access Token">
+    <button onclick="saveToken()">Continue</button>
+  </div>
+
+  <script>
+    function saveToken() {
+      const token = document.getElementById("token").value.trim();
+      if (!token) {
+        alert("⚠️ Please enter a valid Access Token");
+        return;
+      }
+      localStorage.setItem("fb_token", token);
+      window.location.href = "groups.html";
+    }
+  </script>
+</body>
+</html>
