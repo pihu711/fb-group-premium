@@ -1,7 +1,73 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
+  background: url('/couple-bg.jpg') no-repeat center center fixed;
+  background-size: cover;
   font-family: 'Poppins', sans-serif;
+  color: #fff;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Title */
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 8px #000;
+}
+
+/* Login Form */
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: rgba(0,0,0,0.6);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(255,0,150,0.8);
+}
+
+.loginForm input {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+}
+
+.loginForm button {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(45deg, #ff1493, #ff0055);
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.loginForm button:hover {
+  background: linear-gradient(45deg, #ff0055, #ff1493);
+}
+
+/* Dashboard */
+.dashTitle {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 10px #000;
+}
+
+.tagline {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  text-shadow: 1px 1px 5px #000;
 }
