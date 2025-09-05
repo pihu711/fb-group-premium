@@ -1,73 +1,52 @@
-/* Reset and global styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 body {
-  background: url("/couple.jpg") no-repeat center center fixed;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+
+  /* 👇 Tumhari couple wali photo background */
+  background: url("/IMG-20250903-WA0092.jpg") no-repeat center center fixed;
   background-size: cover;
+
   color: #fff;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
-/* Login Box */
-.login-container {
-  background: rgba(0, 0, 0, 0.7);
-  padding: 40px;
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+}
+
+a {
+  color: #ff2fbf;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Login aur panel card ke liye styling */
+.card {
+  background: rgba(15, 15, 15, 0.85);
+  border: 2px solid #ff2fbf;
+  box-shadow: 0px 0px 25px #ff2fbf;
   border-radius: 20px;
-  box-shadow: 0 0 25px rgba(255, 0, 150, 0.8);
-  text-align: center;
-  width: 350px;
-  backdrop-filter: blur(10px);
+  padding: 2rem;
+  backdrop-filter: blur(12px);
 }
 
-.login-container h2 {
-  margin-bottom: 20px;
-  color: #ff0099;
-  text-shadow: 0 0 10px #ff0099, 0 0 20px #ff33cc;
-}
-
-.login-container input {
-  width: 100%;
-  padding: 12px;
-  margin: 10px 0;
-  border: none;
-  border-radius: 10px;
-  outline: none;
-  font-size: 16px;
-}
-
-.login-container input[type="text"],
-.login-container input[type="password"] {
-  background: rgba(255, 255, 255, 0.1);
-  color: #fff;
-}
-
-.login-container input::placeholder {
-  color: #ccc;
-}
-
-.login-container button {
-  width: 100%;
-  padding: 12px;
-  border: none;
-  border-radius: 10px;
-  background: linear-gradient(45deg, #ff0099, #ff33cc);
-  color: #fff;
-  font-size: 18px;
+.button {
+  background: linear-gradient(90deg, #ff2fbf, #ff007f);
+  color: white;
   font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s;
-  box-shadow: 0 0 15px #ff0099;
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  transition: all 0.3s ease-in-out;
 }
 
-.login-container button:hover {
-  background: linear-gradient(45deg, #ff33cc, #ff0099);
-  box-shadow: 0 0 25px #ff33cc, 0 0 40px #ff0099;
+.button:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 20px #ff2fbf;
 }
