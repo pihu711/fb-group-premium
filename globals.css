@@ -2,17 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Blur dark overlay helper */
-.overlay-card {
-  background: rgba(20,20,20,0.65);
-  backdrop-filter: blur(8px);
-}
-
-/* moving gradient text */
+/* Sexy Gradient Text */
 .gradient-moving {
-  background: linear-gradient(90deg, #ec4899, #a855f7, #06b6d4, #ec4899);
-  background-size: 200% 200%;
+  background: linear-gradient(90deg, #ff00cc, #3333ff, #ff0066);
+  background-size: 300% 300%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: flow 6s ease infinite;
+  animation: gradientShift 5s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Pink Glow Effect */
+.drop-shadow-glowpink {
+  text-shadow: 0 0 10px #ff4da6, 0 0 20px #ff1a75, 0 0 40px #ff0066;
 }
